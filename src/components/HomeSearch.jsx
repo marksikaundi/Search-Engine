@@ -44,12 +44,17 @@ export default function HomeSearch() {
         <button onClick={handleSubmit} className="btn ">
           Google Search
         </button>
-        <button disabled={randomSearchLoading} onClick={randomSearch} className="btn flex items-center justify-center disabled:opacity-80">
+        <button
+          disabled={randomSearchLoading}
+          onClick={randomSearch}
+          className="btn flex items-center justify-center disabled:opacity-80"
+        >
           {randomSearchLoading ? (
-            <Image 
-            src="loading.svg" 
-            alt="Loading" 
-            className="h-6 text-center" />
+            <Image
+              src="loading.svg"
+              alt="Loading"
+              className="h-6 text-center"
+            />
           ) : (
             "I am Feeling Lucky"
           )}
