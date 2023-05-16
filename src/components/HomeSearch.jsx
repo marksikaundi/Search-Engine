@@ -52,6 +52,8 @@ export default function HomeSearch() {
           {randomSearchLoading ? (
             <Image
               src="loading.svg"
+              width="40"
+              height="40"
               alt="Loading"
               className="h-6 text-center"
             />
