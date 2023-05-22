@@ -28,7 +28,7 @@ export default async function WebSearchPage(searchParams) {
 
   return (
     <>
-      {results && <WebSearchResults results={results} />}
+      {results && <WebSearchResults results={data} />}
     </>
   );
 }
