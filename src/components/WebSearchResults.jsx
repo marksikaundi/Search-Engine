@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import Parser from "html-react-parser"
 
 export default function WebSearchResults({ results }) {
   return (
@@ -10,12 +11,12 @@ export default function WebSearchResults({ results }) {
         {results.searchInformation?.formattedSearchTime} seconds)
       </p>
       {results.items?.map((result) => (
-        <div key={result.link} className="">
-          <div className="">
-            <Link href={result.link}>{result.formattedUrl}</Link>
-            <Link href={result.link}> {result.title}</Link>
+        <div key={result.link} className="mb-8 max-xl">
+          <div className="group flex flex-col">
+            <Link className="text-sm truncate" href={result.link}>{result.formattedUrl}</Link>
+            <Link className="group-hover:underline decoration-blue-800 text-xl truncate font-medium text-blue-800" href={result.link}> {result.title}</Link>
           </div>
-            <p className="">{result.htmlSnippet}</p>
+            <p className="text-gray-600">{Parser(result.htmlSnippet)}</p>
         </div>
       ))}
     </div>
