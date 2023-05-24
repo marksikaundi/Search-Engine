@@ -24,7 +24,7 @@ export default function PagenationButton() {
         <Link href={`${pathname}?searchTerm=${searchTerm}&start=${startIndex + 10}`}>
           <div className='flex flex-col cursor-pointer items-center hover:underline'>
             <BsChevronRight className='h-5' />
-            <p>Previous</p>
+            <p>Next</p>
           </div>
         </Link>
       )
