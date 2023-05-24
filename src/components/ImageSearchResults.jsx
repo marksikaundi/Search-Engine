@@ -23,7 +23,7 @@ export default function ImageSearchResults({ results }) {
     
         ))}
       </div>
-      <div className="">
+      <div className="ml-16">
         <PagenationButton />
       </div>
     </div>
