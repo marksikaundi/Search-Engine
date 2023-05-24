@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import PagenationButton from "./PagenationButton";
 
 export default function ImageSearchResults({ results }) {
   return (
@@ -21,6 +22,9 @@ export default function ImageSearchResults({ results }) {
             </div>
     
         ))}
+      </div>
+      <div className="">
+        <PagenationButton />
       </div>
     </div>
   );
